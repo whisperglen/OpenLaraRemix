@@ -27,7 +27,7 @@ jobs:
         run: msbuild 'src\platform\win_remix\OpenLara.sln' /p:configuration=${{ matrix.configuration }} /p:platform=${{ matrix.platform }}
 
       - name: Upload binaries
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: open-lara-remix-${{github.run_number}}-${{matrix.configuration}}
           path: bin\*
